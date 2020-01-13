@@ -30,5 +30,3 @@ class TestLink:
         driver.find_element_by_id("addbutton").click()
         
         li6 = driver.find_element_by_name("li6")
-        sys.stderr.write(li6)
-        # assert sample_text in li6
