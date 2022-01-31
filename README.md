@@ -1,81 +1,63 @@
-## Python-Pytest-Selenium
-![LambdaTest Logo](https://www.lambdatest.com/static/images/logo.svg)
+# Python-Pytest-Selenium
 
-### Environment Setup
+![MSTest](https://www.lambdatest.com/resources/images/selenium-testing-pytest.jpg)
 
-1. Global Dependencies
-    * [Install Python](https://www.python.org/downloads/)
-    * Or Install Python with [Homebrew](http://brew.sh/)
-    ```
-    $ brew install python
-    ```
-    * Install [pip](https://pip.pypa.io/en/stable/installing/) for package installation
+## Prerequisites
 
-2. LambdaTest Credentials
-    * In the terminal export your LambdaTest Credentials as environmental variables:
-        - For Macos & Linux
-            ```
-            $ export LT_USERNAME=<your LambdaTest username>
-            $ export LT_ACCESS_KEY=<your LambdaTest access key>
-            ```
-        - Windows
-            ```
-            $ set LT_USERNAME=<your LambdaTest username>
-            $ set LT_ACCESS_KEY=<your LambdaTest access key>
-            ```
+1. Install pip and python.
 
-3. Project
-	* The recommended way to run your tests would be in [virtualenv](https://virtualenv.readthedocs.org/en/latest/). It will isolate the build from other setups you may have running and ensure that the tests run with the specified versions of the modules specified in the requirements.txt file.
+```
+sudo apt install python-pip
+sudo apt install python
+```
 
-	```bash
-    pip install virtualenv
-    ```
-	* Create a virtual environment in your project folder the environment name is arbitrary.
+2. The recommended way to run your tests would be in virtualenv. It will isolate the build from other setups you may have running and ensure that the tests run with the specified versions of the modules specified in the requirements.txt file.
 
-	```bash
-    virtualenv venv
-    ```
+```
+pip install virtualenv
+```
 
-	* Activate the environment:
+## Steps to Run your First Test
 
-	```bash
-    source venv/bin/activate
-    ```
-	* Install the required packages:
+Step 1. Clone the Python-Pytest-Selenium Repository.
 
-	```bash
-    pip install -r requirements.txt
-    ```
+```
+git clone https://github.com/4msha/pytest-selenium-sample.git
+```
 
-### Running Tests:  -n option designates number of parallel tests and -s to disable output capture.
+Step 2. Next we create and Activate the virtual environment in the Python-Pytest-Selenium folder.
 
-*  Tests in Parallel:
+```
+virtualenv venv
+source venv/bin/activate
+```
 
-    ```bash
-    pytest -s -n 2  tests\lt_sample_todo.py
-    ```
+Step 3. Then install required packages.
 
+```
+pip install -r requirements.txt
+```
 
-To use Pytest with LambdaTest, make sure you have the 2 environment variables LT_USERNAME and LT_ACCESS_KEY set. To obtain a username and access_key, sign up for free [here](https://lambdatest.com)).
+Step 4. Inside Python-Pytest-Selenium folder, export the Lambda-test Credentials. You can get these from your automation dashboard.
 
-#####  Routing traffic through your local machine
-- Set tunnel value to `True` in test capabilities
-> OS specific instructions to download and setup tunnel binary can be found at the following links.
->    - [Windows](https://www.lambdatest.com/support/docs/display/TD/Local+Testing+For+Windows)
->    - [Mac](https://www.lambdatest.com/support/docs/display/TD/Local+Testing+For+MacOS)
->    - [Linux](https://www.lambdatest.com/support/docs/display/TD/Local+Testing+For+Linux)
-
-### Important Note:
----
-- Some Safari & IE browsers, doesn't support automatic resolution of the URL string "localhost". Therefore if you test on URLs like "http://localhost/" or "http://localhost:8080" etc, you would get an error in these browsers. A possible solution is to use "localhost.lambdatest.com" or replace the string "localhost" with machine IP address. For example if you wanted to test "http://localhost/dashboard" or, and your machine IP is 192.168.2.6 you can instead test on "http://192.168.2.6/dashboard" or "http://localhost.lambdatest.com/dashboard".
+<p align="center">
+   <b>For Linux/macOS:</b>
+   
+```
+export LT_USERNAME="YOUR_USERNAME"
+export LT_ACCESS_KEY="YOUR ACCESS KEY"
+```
+<p align="center">
+   <b>For Windows:</b>
+```
+set LT_USERNAME="YOUR_USERNAME"
+set LT_ACCESS_KEY="YOUR ACCESS KEY"
+```
+Step 5. To run your first test.
+```
+pytest -s -n=2 tests\lt_sample_todo.py
+```
 
 ## About LambdaTest
+
 [LambdaTest](https://www.lambdatest.com/) is a cloud based selenium grid infrastructure that can help you run automated cross browser compatibility tests on 2000+ different browser and operating system environments. LambdaTest supports all programming languages and frameworks that are supported with Selenium, and have easy integrations with all popular CI/CD platforms. It's a perfect solution to bring your [selenium automation testing](https://www.lambdatest.com/selenium-automation) to cloud based infrastructure that not only helps you increase your test coverage over multiple desktop and mobile browsers, but also allows you to cut down your test execution time by running tests on parallel.
-
-### Resources
-
-##### [Selenium Documentation](http://www.seleniumhq.org/docs/)
-
-##### [Python Documentation](https://docs.python.org/2.7/)
-
-##### [Pytest Documentation](http://pytest.org/latest/contents.html)
