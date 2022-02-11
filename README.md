@@ -22,7 +22,7 @@ pip install virtualenv
 Step 1. Clone the Python-Pytest-Selenium Repository.
 
 ```
-git clone https://github.com/4msha/pytest-selenium-sample.git
+git clone https://github.com/LambdaTest/pytest-selenium-sample.git
 ```
 
 Step 2. Next we create and Activate the virtual environment in the Python-Pytest-Selenium folder.
