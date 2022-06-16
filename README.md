@@ -63,7 +63,7 @@ pip install -r requirements.txt
 
 ### Setting Up Your Authentication
 
-Make sure you have your LambdaTest credentials with you to run test automation scripts. You can get these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build) or by your [LambdaTest Profile](https://accounts.lambdatest.com/login).
+Make sure you have your LambdaTest credentials with you to run test automation scripts. You can get these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample) or by your [LambdaTest Profile](https://accounts.lambdatest.com/login/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample).
 
 **Step 5:** Set LambdaTest **Username** and **Access Key** in environment variables.
 
@@ -98,7 +98,7 @@ capabilities = {
         "browserVersion": "latest",
 }
 ```
-You can generate capabilities for your test requirements with the help of our inbuilt [Desired Capability Generator](https://www.lambdatest.com/capabilities-generator/).
+You can generate capabilities for your test requirements with the help of our inbuilt [Desired Capability Generator](https://www.lambdatest.com/capabilities-generator/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample).
 
 
 ### Executing The Test
@@ -109,7 +109,7 @@ You can generate capabilities for your test requirements with the help of our in
 cd tests //navigate to tests directory
 python lt_sample_todo.py
 ```
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on LambdaTest automation dashboard. [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build) will help you view all your text logs, screenshots and video recording for your entire automation tests.
+Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on LambdaTest automation dashboard. [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample) will help you view all your text logs, screenshots and video recording for your entire automation tests.
 
 ## Run Your Parallel Tests Using PyTest Framework
 
@@ -157,15 +157,15 @@ Once you are able to connect **LambdaTest Tunnel** successfully, you would just 
 Check out our latest tutorials on pytest automation testing 👇
 
 
-* [Basics Of The pytest Framework](https://www.lambdatest.com/blog/selenium-python-pytest-testing-tutorial/)
-* [Setting Up pytest: Installation And Getting Started](https://www.lambdatest.com/blog/test-automation-using-pytest-and-selenium-webdriver/)
-* [Pytest testing Using Selenium WebDriver](https://www.lambdatest.com/blog/selenium-webdriver-with-python/)
-* [Parallel Testing With pytest Selenium](https://www.lambdatest.com/blog/pytest-tutorial-parallel-testing-with-selenium-grid/)
-* [Parameterization In Selenium pytest](https://www.lambdatest.com/blog/parameterization-in-pytest-with-selenium/)
-* [Automated Browser Testing With Selenium pytest Fixtures](https://www.lambdatest.com/blog/end-to-end-tutorial-for-pytest-fixtures-with-examples/)
-* [Executing Multiple Test Cases From Single File](https://www.lambdatest.com/blog/pytest-tutorial-executing-multiple-test-cases-from-single-file/)
-* [How To Stop Test Suites After ‘N’ Test Failures](https://www.lambdatest.com/blog/how-to-stop-test-suite-after-n-test-failures-in-pytest/)
-* [Generating Test Reports In Selenium pytest](https://www.lambdatest.com/blog/pytest-report-generation-for-selenium-automation-scripts/)
+* [Basics Of The pytest Framework](https://www.lambdatest.com/blog/selenium-python-pytest-testing-tutorial/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
+* [Setting Up pytest: Installation And Getting Started](https://www.lambdatest.com/blog/test-automation-using-pytest-and-selenium-webdriver/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
+* [Pytest testing Using Selenium WebDriver](https://www.lambdatest.com/blog/selenium-webdriver-with-python/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
+* [Parallel Testing With pytest Selenium](https://www.lambdatest.com/blog/pytest-tutorial-parallel-testing-with-selenium-grid/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
+* [Parameterization In Selenium pytest](https://www.lambdatest.com/blog/parameterization-in-pytest-with-selenium/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
+* [Automated Browser Testing With Selenium pytest Fixtures](https://www.lambdatest.com/blog/end-to-end-tutorial-for-pytest-fixtures-with-examples/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
+* [Executing Multiple Test Cases From Single File](https://www.lambdatest.com/blog/pytest-tutorial-executing-multiple-test-cases-from-single-file/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
+* [How To Stop Test Suites After ‘N’ Test Failures](https://www.lambdatest.com/blog/how-to-stop-test-suite-after-n-test-failures-in-pytest/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
+* [Generating Test Reports In Selenium pytest](https://www.lambdatest.com/blog/pytest-report-generation-for-selenium-automation-scripts/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
 
 
 Please refer to our [PyTest Tutorial | Selenium With Python | Learn PyTest In 90 minutes | LambdaTest](https://www.youtube.com/watch?v=UzkuOACmBpA). ▶️
@@ -183,7 +183,7 @@ Visit the following links to learn more about LambdaTest's features, setup and t
 
 ## LambdaTest Community :busts_in_silhouette:
 
-The [LambdaTest Community](https://community.lambdatest.com/) allows people to interact with tech enthusiasts. Connect, ask questions, and learn from tech-savvy people. Discuss best practises in web development, testing, and DevOps with professionals from across the globe 🌎
+The [LambdaTest Community](https://community.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample) allows people to interact with tech enthusiasts. Connect, ask questions, and learn from tech-savvy people. Discuss best practises in web development, testing, and DevOps with professionals from across the globe 🌎
 
 ## What's New At LambdaTest ❓
 
@@ -215,6 +215,6 @@ To stay updated with the latest features and product add-ons, visit [Changelog](
       
 ## We are here to help you :headphones:
 
-* Got a query? we are available 24x7 to help. [Contact Us](support@lambdatest.com)
+* Got a query? we are available 24x7 to help. [Contact Us](support@lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
 * For more info, visit - [LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
 
