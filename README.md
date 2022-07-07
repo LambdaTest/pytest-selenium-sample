@@ -31,7 +31,7 @@
 * [Local Testing With pytest](#testing-locally-hosted-or-privately-hosted-projects)
 ## Prerequisites
 
-Before you can start performing **Python** automation testing using **pytest**, you would need to:
+Before you can start performing **Python 3** automation testing using **pytest**, you would need to:
 
 * Install the latest Python build from the [official website](https://www.python.org/downloads/). We recommend using the latest version.
 * Make sure **pip** is installed in your system. You can install **pip** from [here](https://pip.pypa.io/en/stable/installation/).
@@ -107,7 +107,7 @@ You can generate capabilities for your test requirements with the help of our in
 
 ```bash
 cd tests //navigate to tests directory
-python lt_sample_todo.py
+pytest -s tests/lt_sample_todo.py
 ```
 Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on LambdaTest automation dashboard. [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample) will help you view all your text logs, screenshots and video recording for your entire automation tests.
 
@@ -116,7 +116,7 @@ Your test results would be displayed on the test console (or command-line interf
 To run parallel tests using PyTest, we would have to execute the below command in the terminal:
 
 ```bash
-pytest -s -n=2 tests/lt_sample_todo.py
+pytest --workers 2 -s tests/lt_sample_todo.py
 ```
 
 ## Testing Locally Hosted Or Privately Hosted Projects
