@@ -103,7 +103,7 @@ You can generate capabilities for your test requirements with the help of our in
 
 ### Executing The Test
 
-**Step 7:** You would need to navigate to `tests` directory and execute the below command in your terminal/cmd.
+**Step 7:** You would need to execute the below command in your terminal/cmd.
 
 ```bash
 pytest -s tests/lt_sample_todo.py
