@@ -29,8 +29,8 @@ class TestLink:
         email_text_field = driver.find_element(By.ID, "sampletodotext")
         email_text_field.send_keys(sample_text)
 
-        driver.find_element("id", "addbutton").click()
+        driver.find_element(By.ID, "addbutton").click()
 
-        li6 = driver.find_element("name", "li6")
+        li6 = driver.find_element(By.NAME, "li6")
         # sys.stderr.write(li6)
         # assert sample_text in li6
