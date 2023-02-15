@@ -1,0 +1,17 @@
+[
+  {
+    "platform": "Windows 11",
+    "browserName": "chrome",
+    "version": "latest"
+  },
+  {
+    "platform": "Windows 10",
+    "browserName": "firefox",
+    "version": "latest-1"
+  },
+  {
+    "platform": "Windows 8",
+    "browserName": "edge",
+    "version": "latest-2"
+  }
+]

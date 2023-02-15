@@ -8,16 +8,11 @@ from selenium.webdriver.remote.remote_connection import RemoteConnection
 @pytest.fixture(scope='function')
 def driver(request):
     desired_caps = {}
-
-    browser = {
-        "platform": "Windows 10",
-        "browserName": "chrome",
-        "version": "latest"
-    }
+    browser = request.param
 
     desired_caps.update(browser)
-    test_name = request.node.name
-    build = environ.get('BUILD', "Sample PY Build")
+    test_name = request.param["platform"] + "_" + request.param["browserName"] + "_" + request.param["version"]
+    build = environ.get('BUILD', "Sample PY Build Chrome")
     tunnel_id = environ.get('TUNNEL', False)
     username = environ.get('LT_USERNAME', None)
     access_key = environ.get('LT_ACCESS_KEY', None)
@@ -43,6 +38,7 @@ def driver(request):
         # "failed").lower()))
         if request.node.rep_call.failed:
             browser.execute_script("lambda-status=failed")
+            browser.quit()
         else:
             browser.execute_script("lambda-status=passed")
             browser.quit()
