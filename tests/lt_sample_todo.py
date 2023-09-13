@@ -1,6 +1,5 @@
 import pytest
 from selenium.webdriver.common.by import By
-import sys
 
 
 @pytest.mark.usefixtures('driver')
@@ -31,6 +30,5 @@ class TestLink:
 
         driver.find_element(By.ID, "addbutton").click()
 
-        li6 = driver.find_element(By.NAME, "li6")
-        # sys.stderr.write(li6)
-        # assert sample_text in li6
+        li6 = driver.find_element(By.CSS_SELECTOR, "input[name='li6'] + span").text
+        assert sample_text == li6
