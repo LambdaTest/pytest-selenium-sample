@@ -6,7 +6,7 @@ from selenium import webdriver
 
 @pytest.fixture(scope='function')
 def driver(request):
-parallize_test_accross_combinations
+# parallize_test_accross_combinations
     desired_caps = {}
     browser = request.param
 
