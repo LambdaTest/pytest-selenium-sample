@@ -36,4 +36,3 @@ class TestLink:
         obtained_val = driver.find_element(By.ID,"rangeSuccess").text
         assertEqual(exp_val, obtained_val, "Value is not equal to 95")
 
-      

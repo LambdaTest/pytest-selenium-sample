@@ -2,20 +2,10 @@ from os import environ
 
 import pytest
 from selenium import webdriver
-from selenium.webdriver.remote.remote_connection import RemoteConnection
 
 
 @pytest.fixture(scope='function')
 def driver(request):
-    desired_caps = {}
-
-    browser = {
-        "platform": "Windows 10",
-        "browserName": "chrome",
-        "version": "latest"
-    }
-
-    desired_caps.update(browser)
     test_name = request.node.name
     build = environ.get('BUILD', "Sample PY Build")
     tunnel_id = environ.get('TUNNEL', False)
@@ -23,18 +13,21 @@ def driver(request):
     access_key = environ.get('LT_ACCESS_KEY', None)
 
     selenium_endpoint = "http://{}:{}@hub.lambdatest.com/wd/hub".format(username, access_key)
-    desired_caps['build'] = build
-    desired_caps['name'] = test_name
-    desired_caps['video'] = True
-    desired_caps['visual'] = True
-    desired_caps['network'] = True
-    desired_caps['console'] = True
-    caps = {"LT:Options": desired_caps}
-
-    executor = RemoteConnection(selenium_endpoint)
+    chrome_options = webdriver.ChromeOptions()
+    option = {
+        "platform": "Windows 10",
+        "version": "latest",
+        "name": test_name,
+        "Build": build,
+        "video": True,
+        "visual": True,
+        "network": True,
+        "console": True
+    }
+    chrome_options.set_capability("LT:Options", option)
     browser = webdriver.Remote(
-        command_executor=executor,
-        desired_capabilities=caps
+        command_executor=selenium_endpoint,
+        options=chrome_options
     )
     yield browser
 
