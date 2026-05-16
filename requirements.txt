@@ -1,4 +1,4 @@
 selenium>=4.38.0
-pytest==8.4.2
+pytest==9.0.3
 pytest-selenium
 pytest-xdist
