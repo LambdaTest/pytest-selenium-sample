@@ -18,12 +18,14 @@ class TestLinkChrome:
     @pytest.mark.parametrize("driver", load_params_from_json(str(pathlib.Path(__file__).parent.parent) + "/configurations.json"), indirect=True)
     def test_title(self, driver):
         
-        driver.get(r'https://www.lambdatest.com/selenium-playground/')
+        driver.get(r'https://www.testmu.ai/selenium-playground/')
         driver.implicitly_wait(10)
+        driver.refresh()
         driver.find_element(By.XPATH, "//a[contains(text(),'Simple Form Demo')]").click()
         title = driver.current_url
         assert "simple-form-demo" in title, "tetx is not present n the URL"
-        val = "Welcome to LambdaTest"
+        val = "Welcome to TestMu Ai"
+        time.sleep(2)
         driver.find_element( By.ID, "user-message").send_keys(val)
         # driver.find_element(By.XPATH, "//input[@id='user-message']").send_keys(val)
         driver.find_element(By.ID, "showInput").click()
@@ -38,7 +40,9 @@ class TestLinkChrome:
         :return: None
         """
         
-        driver.get('https://www.lambdatest.com/selenium-playground/')
+        driver.get('https://www.testmu.ai/selenium-playground/')
+        driver.implicitly_wait(10)
+        driver.refresh()
         driver.find_element(By.XPATH,"//a[contains(text(),'Drag & Drop Sliders')]").click()
         time.sleep(2)
         ActionChains(driver).move_by_offset(946, 349).pause(2).click().perform()
